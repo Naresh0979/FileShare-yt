@@ -2,7 +2,7 @@ const mongoose=require('mongoose');
 require('dotenv').config();
 function connectDB()
 {
-    // database connecetion 
+    // database connection 
     mongoose.connect(process.env.MONGO_CONNECTION_URL, {useNewUrlParser: true,useUnifiedTopology:true,useCreateIndex:true,useFindAndModify:true});
 
     const connection =mongoose.connection;
