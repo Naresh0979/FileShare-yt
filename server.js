@@ -11,12 +11,13 @@ app.use(express.json());
 
 connectDB();
 // cors
-const corsOptions={
+/*const corsOptions={
     origin:process.env.ALLOWED_CLIENTS.split(',')
-};
+};*/
 app.use(function(req,res,next){
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin,X-Requested-With,Content-Type,Accept");
+    res.header("Access-Control-Allow-Methods", "GET,POST,PUT,PATCH,DELETE,OPTIONS");
     next();
 });
 //app.use(cors(corsOptions));
