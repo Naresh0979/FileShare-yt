@@ -15,7 +15,7 @@ const corsOptions={
     origin:process.env.ALLOWED_CLIENTS.split(',')
 };
 app.use(function(req,res,next){
-    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Origin", "https://shareall-yt.herokuapp.com/");
     res.header("Access-Control-Allow-Headers", "Origin,X-Requested-With,Content-Type,Accept");
     next();
 });
